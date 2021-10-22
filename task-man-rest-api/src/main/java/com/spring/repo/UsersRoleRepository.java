@@ -19,7 +19,7 @@ public interface UsersRoleRepository extends JpaRepository<UserRole, Long>{
 	
     public List<UserRole> findByUser_Username(String username);
    
-	@Query(value="INSERT IGNORE INTO user_role (user_id,role_id) VALUES (1, 1), (2,2)", nativeQuery=true)
+	@Query(value="INSERT IGNORE INTO user_role (user_id,role_id) VALUES (2, 1), (1,2)", nativeQuery=true)
 	@Modifying
 	@Transactional
 	public void inserInitData();
